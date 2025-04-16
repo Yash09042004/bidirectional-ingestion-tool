@@ -1,0 +1,10 @@
+// Initial Planning
+"I’m extending CDAP Wrangler to support parsing units for byte sizes (e.g., \"10KB\") and time durations (e.g., \"150ms\"). How should I integrate new lexer tokens (BYTE_SIZE, TIME_DURATION) into the ANTLR grammar while avoiding duplicate rules?"
+
+// API Class Development
+"Suggest a design for a Java class, ByteSize.java, that can parse input strings like \"10KB\" or \"1.5MB\" and convert them into canonical byte values."
+"How can I implement a TimeDuration.java class that converts strings like \"150ms\" into canonical time units (e.g., nanoseconds or milliseconds)?"
+
+// Directive Implementation & Testing
+"Recommend an approach to implement an aggregate directive that takes columns with byte sizes and time durations, aggregates their values (after converting them), and outputs totals in user-friendly units (such as MB and seconds)."
+"What are some effective testing strategies for verifying the correctness of these new unit parsers and the aggregate directive?"
