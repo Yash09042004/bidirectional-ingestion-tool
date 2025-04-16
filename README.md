@@ -37,21 +37,16 @@ This project implements a web-based tool that enables bidirectional data ingesti
 
 - **Go** 1.16+
 - **Node.js** (for the React frontend)
-- **Docker**: For running a local ClickHouse instance
+- **ClickHouse**: Installed locally and running on port `9000`
 
 ---
 
 ## Setup & Installation
 
 ### 1. ClickHouse Setup
-Run ClickHouse locally using Docker:
+Ensure ClickHouse is installed locally and running on port `9000`. You can verify the server is running with:
 ```bash
-docker run -d --name clickhouse-server --ulimit nofile=262144:262144 -p 8123:8123 clickhouse/clickhouse-server
-```
-
-Verify the ClickHouse server is running:
-```bash
-docker ps
+clickhouse-client --host=localhost --port=9000
 ```
 
 ### 2. Backend Setup
@@ -98,7 +93,7 @@ The UI should be accessible at `http://localhost:3000`.
 - Use the UI to select the data source (ClickHouse or Flat File).
 
 ### Provide Connection Details:
-- For ClickHouse, enter Host, Port, Database, User, and JWT Token.
+- For ClickHouse, enter Host (`localhost`), Port (`9000`), Database, User, and JWT Token.
 - For Flat File, specify the file name and delimiter used.
 
 ### Schema Discovery:
