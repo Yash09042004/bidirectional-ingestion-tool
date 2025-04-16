@@ -47,6 +47,7 @@ This project implements a web-based tool that enables bidirectional data ingesti
 Ensure ClickHouse is installed locally and running on port `9000`. You can verify the server is running with:
 ```bash
 clickhouse-client --host=localhost --port=9000
+
 ```
 
 ### 2. Backend Setup
